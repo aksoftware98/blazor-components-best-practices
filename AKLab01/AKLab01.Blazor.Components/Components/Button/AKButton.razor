@@ -1,0 +1,11 @@
+﻿@namespace AKLab01.Blazor.Components
+@inherits AKComponentBase
+
+<button class="@_buttonClasses" style="@_buttonStyle @Style" @attributes="UserAttributes" disabled="@IsDisabled" @onclick="OnClick">
+	@if(!string.IsNullOrWhiteSpace(Icon))
+	{
+		<i class="fa-solid fa-@Icon" style="margin-right:10px"></i>
+	}
+
+	@Text
+</button>
